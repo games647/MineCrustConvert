@@ -35,7 +35,7 @@ fn get_playername(s: &str) -> Option<String> {
         _ => println!("No data"),
     }
 
-    return None;
+    None
 }
 
 fn main() {
@@ -67,7 +67,7 @@ fn gen_offline_uuid(username: &str) -> String {
     //IETF variant
     hash[8] = hash[8] & 0x3f | 0x80;
 
-    return tohex(&hash)
+    tohex(&hash)
 }
 
 fn tohex(input: &[u8]) -> String {
