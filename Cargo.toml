@@ -1,7 +1,7 @@
 [package]
 name = "mine_crust_convert"
 version = "0.1.0"
-authors = ["games647 <games@tsprivat.de>"]
+authors = ["games647 <games647@users.noreply.github.com>"]
 license = "MIT"
 homepage = "https://github.com/games647/MineCrustConvert"
 repository = "https://github.com/games647/MineCrustConvert"

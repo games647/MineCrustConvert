@@ -45,7 +45,6 @@ fn main() {
     }
 
     let files : ReadDir = fs::read_dir("./").unwrap();
-
     for file in files {
         let dir_entry: fs::DirEntry = file.unwrap();
         let file_type: fs::FileType = dir_entry.file_type().unwrap();
