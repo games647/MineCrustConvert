@@ -1,0 +1,20 @@
+[package]
+name = "MineCrustConvert"
+version = "0.1.0"
+authors = ["games647 <games@tsprivat.de>"]
+license = "MIT"
+homepage = "https://github.com/games647/MineCrustConvert"
+repository = "https://github.com/games647/MineCrustConvert"
+documentation = "https://games647.github.io/doc/MineCrustConvert/"
+description = """
+This simple rust program converts Minecraft premium (online mode) UUIDs to cracked ones. By extracting the lastKnownName
+NBT Tag from the user .dat file we could generate a new UUID which is based only on the name. This can be useful if
+you want to switch your server to offline mode, but don't want install a extra java plugin to convert the inventory,
+speed, flying, ... player dat file.
+"""
+
+[dependencies]
+nbtrs = {git="https://github.com/overviewer/nbtrs"}
+flate2 = "0.2"
+uuid = { version = "0.2", features = ["v4"] }
+md5 = "0.2.0"
