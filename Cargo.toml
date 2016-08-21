@@ -2,7 +2,7 @@
 name = "mine_crust_convert"
 version = "0.1.0"
 authors = ["games647 <games647@users.noreply.github.com>"]
-license = "MIT"
+license = "Unlicense"
 homepage = "https://github.com/games647/MineCrustConvert"
 repository = "https://github.com/games647/MineCrustConvert"
 documentation = "https://games647.github.io/doc/MineCrustConvert/"
