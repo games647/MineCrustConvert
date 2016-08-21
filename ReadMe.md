@@ -10,6 +10,7 @@ speed, flying, ... player dat file.
 ## Features
 
 * Checks only for *.dat files
+* Backup old files
 
 ## Building
 

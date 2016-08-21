@@ -39,7 +39,11 @@ fn get_playername(s: &str) -> Option<String> {
 }
 
 fn main() {
-    println!("{:?}", gen_offline_uuid("games647"));
+    match fs::create_dir("backup_convert") {
+        Err(why) => panic!("Error creating backup folder {:?}", why.kind()),
+        Ok(_) => {},
+    }
+
     let files : ReadDir = fs::read_dir("./").unwrap();
 
     for file in files {
@@ -53,7 +57,17 @@ fn main() {
             if file_name.ends_with(".dat") {
                 let playername = get_playername(file_name).unwrap();
                 println!("Converting {}", playername);
-                fs::rename(file_name, format!("{}.dat", gen_offline_uuid(&playername)));
+
+                match fs::copy(file_name, format!("backup_convert/{}", file_name)) {
+                    Err(why) => panic!("Error copying file {:?}", why),
+                    _ => {}
+                }
+
+                let new_filename = format!("{}.dat", gen_offline_uuid(&playername));
+                match fs::rename(file_name, new_filename) {
+                    Err(why) => panic!("Error renaming file {:?}", why),
+                    _ => {}
+                }
             }
         }
     }
