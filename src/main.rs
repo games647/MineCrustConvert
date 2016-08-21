@@ -3,20 +3,13 @@ extern crate flate2;
 extern crate uuid;
 extern crate md5;
 
-use uuid::Uuid;
-use uuid::UuidVersion;
-
 use nbtrs::Tag;
 
 use std::fs::File;
 use std::fs;
-use std::str::FromStr;
 use std::fs::ReadDir;
-use std::fmt::Write;
 
 use flate2::read::GzDecoder;
-
-use md5::Context;
 
 fn get_playername(s: &str) -> Option<String> {
     let file: File = File::open(s).unwrap();
