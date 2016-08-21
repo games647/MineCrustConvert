@@ -1,5 +1,5 @@
 [root]
-name = "MineCrustConvert"
+name = "mine_crust_convert"
 version = "0.1.0"
 dependencies = [
  "flate2 0.2.14 (registry+https://github.com/rust-lang/crates.io-index)",

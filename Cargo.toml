@@ -1,5 +1,5 @@
 [package]
-name = "MineCrustConvert"
+name = "mine_crust_convert"
 version = "0.1.0"
 authors = ["games647 <games@tsprivat.de>"]
 license = "MIT"
