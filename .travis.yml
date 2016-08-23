@@ -1,0 +1,6 @@
+# Use travis-ci.org for automatic compile tests
+language: rust
+
+rust:
+  - stable
+  - beta
